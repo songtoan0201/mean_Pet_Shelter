@@ -1,0 +1,29 @@
+<h3>Details about {{OnePet.name}}</h3>
+<button (click)="goHome()">Go Home</button>
+<table class="table">
+  <tbody>
+    <tr>
+      <td>Pet type:</td>
+      <td>{{OnePet.type}}</td>
+    </tr>
+    <tr>
+      <td>Description:</td>
+      <td>{{OnePet.description}}</td>
+    </tr>
+    <tr>
+      <td>Skills:</td>
+      <td>
+        {{OnePet.skill}}
+      </td>
+    </tr>
+    <tr>
+      <td>Likes:</td>
+      <td>{{OnePet.like}}</td>
+    </tr>
+
+    <button (click)="likePet(OnePet._id)" onclick="this.disabled = 'disabled';"
+      class="btn btn-small btn-outline-success ml-3">Like
+      this pet</button>
+    <button (click)="adoptPet(OnePet._id)" class="btn btn-small btn-outline-success ml-3">Adopt this pet</button>
+  </tbody>
+</table>

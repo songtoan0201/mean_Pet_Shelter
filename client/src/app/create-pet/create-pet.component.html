@@ -1,0 +1,33 @@
+<h3>Know of a pet needing a home?</h3>
+<div style="color: red; padding: 5px 0px;" *ngFor="let key of errors; index as i">
+  {{errors[i]}}
+</div>
+<form (submit)="onSubmitCreatePet()">
+  <fieldset>
+    <div class="form-group">
+      <label name="newPet.name">Pet name: </label>
+      <input class="form-control" type="text" name="newPet.name" [(ngModel)]="newPet.name" />
+    </div>
+    <div class="form-group">
+      <label name="newPet.type">Pet type: </label>
+      <input class="form-control" type="text" name="newPet.type" [(ngModel)]="newPet.type" />
+    </div>
+    <div class="form-group">
+      <label name="newPet.description">Description: </label>
+      <input class="form-control" type="text" name="newPet.description" [(ngModel)]="newPet.description" />
+    </div>
+    <p>Skill:</p>
+    <div class="form-group ml-3">
+      <label name="skill1">Skill 1: </label>
+      <input class="form-control" type="text" name="skill1" [(ngModel)]="skill1" />
+      <label name="skill2">Skill 2: </label>
+      <input class="form-control" type="text" name="skill2" [(ngModel)]="skill2" />
+      <label name="skill3">Skill 3: </label>
+      <input class="form-control" type="text" name="skill3" [(ngModel)]="skill3" />
+    </div>
+
+    <input class="btn btn-small btn-outline-success" type="submit" value="Create New Pet" />
+
+    <button (click)="goHome()" class="btn btn-small btn-outline-success ml-3">Cancel</button>
+  </fieldset>
+</form>
